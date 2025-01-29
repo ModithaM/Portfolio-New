@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import ThemeContextProvider from "@/context/theme-context";
 import "./globals.css";
+import { Dock } from "@/components/dock";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       >
         <ThemeContextProvider>
           {children}
+          <Dock/>
         </ThemeContextProvider>
       </body>
     </html>

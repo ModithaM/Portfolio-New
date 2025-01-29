@@ -5,9 +5,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import myimg from "../public/me.jpeg";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { FaGithubSquare } from "react-icons/fa";
-import { FaMedium , FaSquareInstagram } from "react-icons/fa6";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function Home() {
 
@@ -59,8 +57,8 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hi, I'm Moditha Marasingha.</span> I'm a{" "}
-        <span className="font-bold">Back-End developer.</span>{" "}I enjoy
-        building <span className="italic">things</span>. My focus is{" "}
+        <span className="font-bold">Back-End developer</span>{" "}who enjoys
+        building <span className="italic">things</span>. My main focus is{" "}
         <span className="underline">Java</span>.
       </motion.h1>
 
@@ -81,39 +79,7 @@ export default function Home() {
           Contact me {" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
-
-        <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/moditha-marasingha"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/ModithaM"
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
-
-        <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://medium.com/@moditham"
-          target="_blank"
-        >
-          <FaMedium />
-        </a>
-
-        <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.instagram.com/moditha_marasingha"
-          target="_blank"
-        >
-          <FaSquareInstagram />
-        </a>
-
+        
       </motion.div>
     </section>
   );
