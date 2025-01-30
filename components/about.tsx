@@ -3,11 +3,12 @@
 import React from "react";
 import SectionHeading from "./sectionHeading";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function About() {
   return (
     <motion.section
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className=" text-center leading-8 sm:mb-2 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -16,8 +17,8 @@ export default function About() {
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3 text-left">
         
-        <span className="font-medium">A Software Engineering undergraduate at Sri Lanka Institute of{" "}
-        Information Technology (SLIIT)</span>, specializing in{" "}<span className="font-medium">backend 
+        <span className="font-medium">A Software Engineering undergraduate at </span><span className="font-medium underline"><Link href="https://www.sliit.lk/" target="_blank">Sri Lanka Institute of{" "}
+        Information Technology (SLIIT)</Link>,</span> specializing in{" "}<span className="font-medium">backend 
         development</span> and innovative web solutions. With expertise in <span className="font-medium">Java, Spring 
         Boot, MongoDB and MySQL,</span>  I enjoy 
         building scalable and efficient systems. Mentoring others in Java MVC architecture 
