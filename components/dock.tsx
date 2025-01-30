@@ -16,7 +16,8 @@ export function Dock() {
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#home",
+      newTab: false,
     },
 
     {
@@ -24,7 +25,8 @@ export function Dock() {
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#projects",
+      newTab: false,
     },
     {
       title: "LinkedIn",
@@ -32,6 +34,7 @@ export function Dock() {
         <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://www.linkedin.com/in/moditha-marasingha",
+      newTab: true,
     },
     {
         title: "GitHub",
@@ -39,6 +42,7 @@ export function Dock() {
           <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
         ),
         href: "https://github.com/ModithaM",
+        newTab: true,
     },
     {
       title: "Blog",
@@ -46,6 +50,7 @@ export function Dock() {
         <IconArticle className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://medium.com/@moditham",
+      newTab: true,
     },
 
     {
@@ -54,6 +59,7 @@ export function Dock() {
         <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://www.instagram.com/moditha_marasingha",
+      newTab: true,
     },
   ];
   return (
