@@ -37,7 +37,7 @@ export default function Education() {
 
   return (
     <motion.section
-      className="mb-28 max-w-[45rem] text-center sm:mb-40 scroll-mt-28 w-full"
+      className="mb-28 max-w-[45rem] text-center sm:mb-2 scroll-mt-28 w-full"
       id="education"
       ref={ref}
       style={{

@@ -1,6 +1,7 @@
 import HomeContent from "../components/home";
 import About from "../components/about";
 import Education from "../components/education";
+import Skills from "../components/skills";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HomeContent />
       <About />
       <Education />
+      <Skills />
     </main>
   );
 }
