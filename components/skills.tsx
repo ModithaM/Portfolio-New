@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./sectionHeading";
+import SectionHeading from "./ui/sectionHeading";
 import { motion } from "framer-motion";
 import { Badge } from "./ui/badge";
 

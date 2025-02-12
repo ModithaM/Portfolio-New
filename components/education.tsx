@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useRef } from "react";
-import SectionHeading from "./sectionHeading";
+import SectionHeading from "./ui/sectionHeading";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { EducationCard } from "./ui/education-card";
 
