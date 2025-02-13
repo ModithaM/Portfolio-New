@@ -8,12 +8,12 @@ import { Icons } from "./ui/icons";
 export default function Projects() {
 
     const Projects = [{
-        title: "Online Pharmacy Portal",
+        title: "Online Pharmacy Portal (PharmacyX)",
         href: "",
         dates: "Aug 2024 - Dec 2024",
         active: true,
         description:
-          "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+          "PharmacyX is an online pharmacy system for browsing medications, uploading prescriptions, and managing orders. Built with HTML, CSS, JavaScript, PHP, and MySQL, it was a group project where I managed development and collaboration using GitHub.",
         technologies: [
           "HTML",
           "CSS",
@@ -38,7 +38,7 @@ export default function Projects() {
         dates: "Aug 2024 - Dec 2024",
         active: true,
         description:
-          "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+          "This portfolio is a prime example of my web development skills, designed and coded entirely using HTML, CSS, and JavaScript without the use of any CSS libraries. It demonstrates my ability to create responsive, user-friendly, and visually appealing web designs through clean and efficient code.",
         technologies: [
           "Next.js",
           "Framer Motion",
@@ -67,7 +67,7 @@ export default function Projects() {
         dates: "Aug 2024 - Dec 2024",
         active: true,
         description:
-          "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+          "My movie gallery project showcases a dynamic platform for managing and displaying movie-related images. The frontend is built with React, ensuring a seamless and interactive user experience. The backend, developed using Spring Boot, features a RESTful API integrated with MongoDB for efficient image management.",
         technologies: [
           "React",
           "CSS",
@@ -97,7 +97,7 @@ export default function Projects() {
         dates: "Aug 2024 - Dec 2024",
         active: true,
         description:
-          "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+          "I developed and manage a custom-themed blog using Hugo, where I regularly share content on topics I'm passionate about. This blog showcases my skills in content creation, static site generation, and web design with Hugo, all while reflecting my unique personal style.",
         technologies: [
           "HTML",
           "CSS",
