@@ -48,7 +48,7 @@ export default function Projects() {
         links: [
           {
             type: "Source",
-            href: "https://github.com/ModithaM/Online_Pharmacy_Portal",
+            href: "https://github.com/ModithaM/Portfolio-New",
             icon: <Icons.github className="size-3" />,
           },
           {
@@ -78,12 +78,12 @@ export default function Projects() {
         links: [
           {
             type: "Source Frontend",
-            href: "https://github.com/ModithaM/Online_Pharmacy_Portal",
+            href: "https://github.com/ModithaM/ImageApp-Frontend",
             icon: <Icons.github className="size-3" />,
           },
           {
             type: "Source Backend",
-            href: "https://github.com/ModithaM/Online_Pharmacy_Portal",
+            href: "https://github.com/ModithaM/ImageApp-Backend",
             icon: <Icons.github className="size-3" />,
           },
         ],
@@ -108,7 +108,7 @@ export default function Projects() {
         links: [
           {
             type: "Website",
-            href: "https://github.com/ModithaM/Online_Pharmacy_Portal",
+            href: "https://moditham.github.io/MyBlog/",
             icon: <Icons.globe className="size-3" />,
           },
         ],
@@ -118,7 +118,7 @@ export default function Projects() {
       }];
 
   return (
-    <div id="projects">
+    <section id="projects">
       <SectionHeading>Projects</SectionHeading>
       
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
@@ -138,6 +138,6 @@ export default function Projects() {
               </div>
             ))}
           </div>
-    </div>
+    </section>
   );
 }
