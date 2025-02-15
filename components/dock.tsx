@@ -65,7 +65,6 @@ export function Dock() {
   return (
     <div className="fixed bottom-0 left-0 w-full flex justify-center pb-4">
       <FloatingDock
-        mobileClassName="translate-y-20" // only for demo, remove for production
         items={links}
       />
     </div>

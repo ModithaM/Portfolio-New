@@ -10,7 +10,7 @@ export default function Education() {
 
    const education = [
         {
-          school: "Sri Lanka Institute of Information Technology (SLIIT)",
+          school: "SLIIT",
           href: "https://www.sliit.lk/",
           degree: "Bachelor's Degree of Information Technology (BCS)",
           logoUrl: "/sliit.png",
@@ -37,7 +37,7 @@ export default function Education() {
 
   return (
     <motion.section
-      className="mb-28 max-w-[45rem] text-center sm:mb-2 scroll-mt-28 w-full"
+      className="max-w-[45rem] text-center sm:mb-2 scroll-mt-28 w-full"
       id="education"
       ref={ref}
       style={{

@@ -37,7 +37,7 @@ export default function Skills() {
 
   return (
     <section
-      className="mb-28 max-w-[45rem] text-center sm:mb-2 scroll-mt-28 w-full"
+      className="max-w-[45rem] text-center sm:mb-2 scroll-mt-28 w-full"
       id="skills"
     >
       <SectionHeading>Skills</SectionHeading>
