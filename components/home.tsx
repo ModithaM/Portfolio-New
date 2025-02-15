@@ -56,7 +56,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hi, I'm Moditha Marasingha.</span> I'm a{" "}
+        <span className="font-bold">Hi, I&apos;m Moditha Marasingha.</span> I&apos;m a{" "}
         <span className="font-bold">Back-End developer</span>{" "}who enjoys
         building <span className="italic">things</span>. My main focus is{" "}
         <span className="underline">Java</span>.

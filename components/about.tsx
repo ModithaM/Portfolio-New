@@ -32,7 +32,7 @@ export default function About() {
       <span className="font-medium">NodeMCU and Arduino</span>{" "}
       to create real-time sensor solutions. Always eager to tackle complex problems,{" "}
       I continuously explore new technologies to refine my skills and contribute to{" "}
-      impactful projects. Let's connect and build something amazing!
+      impactful projects. Let&apos;s connect and build something amazing!
       </p>
     </motion.section>
   );

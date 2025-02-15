@@ -3,7 +3,6 @@
 import React from "react";
 import { useState } from "react";
 import SectionHeading from "./ui/sectionHeading";
-import { motion } from "framer-motion";
 import { FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
@@ -12,7 +11,7 @@ export default function Contact() {
     const [message, setMessage] = useState("");
     const [name, setName] = useState("");
     const [pending, setPending] = useState(false);
-    const [success, setSuccess] = useState(false);
+    //const [success, setSuccess] = useState(false);
     // todo: implement the success message 
 
     async function handleSubmit(event: { preventDefault: () => void; }) {
@@ -36,7 +35,7 @@ export default function Contact() {
         const result = await response.json();
         if (result.success) {
             //console.log(result);
-            setSuccess(true);
+            //setSuccess(true);
         }
         } catch (error) {
           console.error("Error submitting form:", error);

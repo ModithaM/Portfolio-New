@@ -48,7 +48,7 @@ export default function Education() {
       <SectionHeading>Education</SectionHeading>
       
       <div className="flex min-h-0 flex-col gap-y-3 ">
-          {education.map((education, id) => (
+          {education.map((education) => (
               <EducationCard
                 key={education.school}
                 href={education.href}
