@@ -57,7 +57,7 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hi, I&apos;m Moditha Marasingha.</span> I&apos;m a{" "}
-        <span className="font-bold">Back-End developer</span>{" "}who enjoys
+        <span className="font-bold">Full-Stack developer</span>{" "}who enjoys
         building <span className="italic">things</span>. My main focus is{" "}
         <span className="underline">Java</span>.
       </motion.h1>
