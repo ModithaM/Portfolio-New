@@ -12,13 +12,15 @@ export default function Skills() {
     "Spring Boot",
     "JavaScript",
     "React",
-    "Git",
-    "GitHub",
+    "Next.js",
     "HTML",
     "CSS",
+    "Git",
+    "GitHub",
     "MySQL",
     "MongoDB",
     "Postman",
+    "IOT",
   ];
 
   const fadeInAnimationVariants = {
