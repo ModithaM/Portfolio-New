@@ -62,7 +62,7 @@ export default function Contact() {
         </p>
 
         <div className="flex justify-center min-w-full">
-            <form className="w-full max-w-xl" onSubmit={handleSubmit}>
+            <form className="w-full max-w-xl dark:text-black" onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <input 
                       type="text" 
