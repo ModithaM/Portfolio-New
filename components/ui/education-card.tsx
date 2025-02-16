@@ -40,6 +40,7 @@ export const EducationCard = ({
   return (
     <Link
       href={href || "#"}
+      target="_blank"
       className="block cursor-pointer"
       onClick={handleClick}
     >
