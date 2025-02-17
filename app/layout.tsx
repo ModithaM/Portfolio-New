@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const jsonLd: WithContext<Person> = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": ["Moditha Marasingha", "ModithaM", "Moditha"],
+  "name": "Moditha Marasingha",
   "jobTitle": ["Software Engineering Undergraduate", "Backend Developer", "Web Developer", "IoT Enthusiast" ,"Software Engineer"],
   "image": "https://www.moditha.me/me.jpeg",
   "url": "https://www.moditha.me",
