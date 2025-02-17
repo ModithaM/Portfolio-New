@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import ThemeContextProvider from "@/context/theme-context";
 import "./globals.css";
 import { Dock } from "@/components/dock";
-import { ProfilePage, WithContext } from "schema-dts";
+import { Person, WithContext } from "schema-dts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,15 +26,32 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd: WithContext<ProfilePage> = {
+const jsonLd: WithContext<Person> = {
   "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "mainEntity": {
-    "@type": "Person",
-    "name": "Moditha Marasingha",
-    "jobTitle": "Software Engineer",
-    "image": "https://www.moditha.me/me.jpeg",
-    "url": "https://www.moditha.me",
+  "@type": "Person",
+  "name": ["Moditha Marasingha", "ModithaM", "Moditha"],
+  "jobTitle": ["Software Engineering Undergraduate", "Backend Developer", "Web Developer", "IoT Enthusiast" ,"Software Engineer"],
+  "image": "https://www.moditha.me/me.jpeg",
+  "url": "https://www.moditha.me",
+  "sameAs": [
+    "https://www.linkedin.com/in/moditha-marasingha",
+    "https://github.com/ModithaM",
+    "https://medium.com/@moditham",
+    "https://www.instagram.com/moditha_marasingha"
+  ],
+  "knowsAbout": [
+    "Software Engineering",
+    "Web Development",
+    "Backend Development",
+    "IoT Projects",
+    "Java",
+    "Spring Boot",
+    "React",
+    "MongoDB"
+  ],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.moditha.me"
   }
 };
 
