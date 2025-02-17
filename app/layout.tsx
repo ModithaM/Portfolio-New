@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import ThemeContextProvider from "@/context/theme-context";
 import "./globals.css";
 import { Dock } from "@/components/dock";
+import { ProfilePage, WithContext } from "schema-dts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,19 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd: WithContext<ProfilePage> = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Moditha Marasingha",
+    "jobTitle": "Software Engineer",
+    "image": "https://www.moditha.me/me.jpeg",
+    "url": "https://www.moditha.me",
+  }
+};
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,6 +49,10 @@ export default function RootLayout({
       <body
         className={`${inter.className} max-w-2xl mx-auto bg-gray-50 text-gray-950 relative pt-3 sm:pt-16 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 scroll-smooth`}
       >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
         <ThemeContextProvider>
           {children}
           <Dock/>
