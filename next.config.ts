@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'cdn-images-1.medium.com',
         port: '',
-        pathname: '/**', // Allow all paths under this domain
+        pathname: '/**',
       },
     ],
   },
