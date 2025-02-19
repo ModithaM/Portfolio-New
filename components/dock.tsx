@@ -16,16 +16,23 @@ export function Dock() {
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#home",
+      href: "/",
       newTab: false,
     },
-
+    {
+      title: "Blog",
+      icon: (
+        <IconArticle className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/blog",
+      newTab: false,
+    },
     {
       title: "Projects",
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#projects",
+      href: "/#projects",
       newTab: false,
     },
     {
@@ -44,15 +51,6 @@ export function Dock() {
         href: "https://github.com/ModithaM",
         newTab: true,
     },
-    {
-      title: "Blog",
-      icon: (
-        <IconArticle className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "https://medium.com/@moditham",
-      newTab: true,
-    },
-
     {
       title: "Instagram",
       icon: (
