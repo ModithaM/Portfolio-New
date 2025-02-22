@@ -4,6 +4,7 @@ import React from "react";
 import { useState } from "react";
 import SectionHeading from "./ui/sectionHeading";
 import { FaPaperPlane } from "react-icons/fa";
+import submitForm from "../services/submitForm"; 
 
 export default function Contact() {
 
@@ -12,32 +13,19 @@ export default function Contact() {
     const [name, setName] = useState("");
     const [pending, setPending] = useState(false);
     //const [success, setSuccess] = useState(false);
-    // todo: implement the success message 
+    // todo: implement the success message
 
     async function handleSubmit(event: { preventDefault: () => void; }) {
       event.preventDefault();
 
-        try {
-          setPending(true);
-          const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-            },
-            body: JSON.stringify({
-                access_key: "2510f8a8-388f-4f7b-b618-f4200feff6da",
-                name: name,
-                email: email,
-                message: message,
-            }),
-        });
-        const result = await response.json();
+      try {
+        setPending(true);
+        const result = await submitForm(name, email, message);
         if (result.success) {
             //console.log(result);
             //setSuccess(true);
         }
-        } catch (error) {
+      } catch (error) {
           console.error("Error submitting form:", error);
         } finally {
           setPending(false);
