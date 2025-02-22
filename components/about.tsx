@@ -18,7 +18,7 @@ export default function About() {
       <p className="mb-3 text-left">
         
         <span className="font-medium">A Software Engineering undergraduate at </span><span className="font-medium underline"><Link href="https://www.sliit.lk/" target="_blank">Sri Lanka Institute of{" "}
-        Information Technology (SLIIT)</Link>,</span> specializing in{" "}<span className="font-medium">backend 
+        Information Technology (SLIIT)</Link>,</span> maintaining a 3.6/4 GPA and specializing in{" "}<span className="font-medium">backend 
         development</span> and innovative web solutions. With expertise in <span className="font-medium">Java, Spring 
         Boot, MongoDB and MySQL,</span>  I enjoy 
         building scalable and efficient systems. Mentoring others in Java MVC architecture 
