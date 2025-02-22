@@ -21,7 +21,7 @@ export default function Blog() {
         const loadAllPosts = async () => {
           try {
             const allPosts = await getAllPosts();
-            const transformedPosts = allPosts.map((post: any) => ({
+            const transformedPosts = allPosts.map((post: Post) => ({
                 ...post,
                 image: extractImageSrc(post.description),
                 description: extractFirst20Words(post.description),
