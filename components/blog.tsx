@@ -21,7 +21,12 @@ export default function Blog() {
         const loadAllPosts = async () => {
           try {
             const allPosts = await getAllPosts();
-            setPosts(allPosts);
+            const transformedPosts = allPosts.map((post: any) => ({
+                ...post,
+                image: extractImageSrc(post.description),
+                description: extractFirst20Words(post.description),
+              }));
+            setPosts(transformedPosts);
           } catch (err) {
             console.log(err);
           }
@@ -59,9 +64,9 @@ export default function Blog() {
                 <BlogCard
                   key={post.title}
                   title={post.title}
-                  description={extractFirst20Words(post.description)}
+                  description={post.description}
                   dates={post.pubDate}
-                  image={extractImageSrc(post.description)}
+                  image={post.image}
                   links={post.link}
                 />
               </div>
