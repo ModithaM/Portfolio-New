@@ -12,8 +12,8 @@ export default function Contact() {
     const [message, setMessage] = useState("");
     const [name, setName] = useState("");
     const [pending, setPending] = useState(false);
-    //const [success, setSuccess] = useState(false);
-    // todo: implement the success message
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(false);
 
     async function handleSubmit(event: { preventDefault: () => void; }) {
       event.preventDefault();
@@ -22,11 +22,14 @@ export default function Contact() {
         setPending(true);
         const result = await submitForm(name, email, message);
         if (result.success) {
-            //console.log(result);
-            //setSuccess(true);
+            setSuccess(true);
+        }
+        if (result.error) {
+            setError(true);
         }
       } catch (error) {
           console.error("Error submitting form:", error);
+          setError(true);
         } finally {
           setPending(false);
           setEmail("");
@@ -51,6 +54,16 @@ export default function Contact() {
 
         <div className="flex justify-center min-w-full">
             <form className="w-full max-w-xl dark:text-black" onSubmit={handleSubmit}>
+                {success && (
+                    <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+                      <span className="font-medium"></span> Your message has been sent successfully.
+                    </div>
+                )}
+                {error && (
+                    <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+                      <span className="font-medium"></span> There was an error sending your message. Please try again.
+                    </div>
+                )}
                 <div className="mb-3">
                     <input 
                       type="text" 
