@@ -12,7 +12,7 @@ export default function Education() {
     {
       school: "SLIIT",
       href: "https://www.sliit.lk/",
-      degree: "Bachelor's Degree of Information Technology (BSc)",
+      degree: "Bachelor's Degree, Information Technology",
       logoUrl: "/sliit.png",
       start: "2023",
       end: "Present",
