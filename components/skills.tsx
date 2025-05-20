@@ -15,12 +15,14 @@ export default function Skills() {
     "Next.js",
     "HTML",
     "CSS",
+    "IOT",
     "Git",
     "GitHub",
+    "Docker",
     "MySQL",
     "MongoDB",
     "Postman",
-    "IOT",
+    "Azure",
   ];
 
   const fadeInAnimationVariants = {
@@ -44,24 +46,24 @@ export default function Skills() {
     >
       <SectionHeading>Skills</SectionHeading>
 
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <div className="flex flex-wrap gap-1">
-            {skills.map((skill, id) => (
-                <motion.div 
-                  variants={fadeInAnimationVariants}
-                  key={id}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}
-                  custom={id}
-                >
-                  <Badge key={skill}>{skill}</Badge>
-                </motion.div>
-            ))}
-          </div>
+      <div className="flex min-h-0 flex-col gap-y-3">
+        <div className="flex flex-wrap gap-1">
+          {skills.map((skill, id) => (
+            <motion.div
+              variants={fadeInAnimationVariants}
+              key={id}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              custom={id}
+            >
+              <Badge key={skill}>{skill}</Badge>
+            </motion.div>
+          ))}
         </div>
+      </div>
     </section>
   );
 }
