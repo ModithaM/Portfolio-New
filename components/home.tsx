@@ -58,8 +58,7 @@ export default function Home() {
       >
         <span className="font-bold">Hi, I&apos;m Moditha Marasingha.</span> I&apos;m a{" "}
         <span className="font-bold">Full-Stack developer</span>{" "}who enjoys
-        building <span className="italic">things</span>. My main focus is{" "}
-        <span className="underline">Java</span>.
+        building <span className="italic">things</span>.
       </motion.h1>
 
       <motion.div
@@ -79,7 +78,7 @@ export default function Home() {
           Contact me {" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
-        
+
       </motion.div>
     </section>
   );
