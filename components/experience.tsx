@@ -10,9 +10,9 @@ export default function Experience() {
 
     const experience = [
         {
-            company: "Revocare Solutions",
+            company: "Intern Software Engineer",
             href: "https://revocaresolutions.com/",
-            position: "Intern Software Engineer",
+            position: "Revocare Solutions",
             logoUrl: "/revocare.jpeg",
             start: "2025",
             end: "Present",
