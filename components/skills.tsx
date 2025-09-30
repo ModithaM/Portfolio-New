@@ -11,6 +11,7 @@ export default function Skills() {
     "Java",
     "Spring Boot",
     "JavaScript",
+    "TypeScript",
     "React",
     "Next.js",
     "HTML",
@@ -21,6 +22,8 @@ export default function Skills() {
     "Docker",
     "MySQL",
     "MongoDB",
+    "PostgreSQL",
+    "Redis",
     "Postman",
     "Azure",
   ];
