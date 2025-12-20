@@ -16,24 +16,33 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3 text-left">
-        
-        <span className="font-medium">A Software Engineering undergraduate at </span><span className="font-medium underline"><Link href="https://www.sliit.lk/" target="_blank">Sri Lanka Institute of{" "}
-        Information Technology (SLIIT)</Link>,</span> maintaining a 3.6/4 GPA and specializing in{" "}<span className="font-medium">backend 
-        development</span> and innovative web solutions. With expertise in <span className="font-medium">Java, Spring 
-        Boot, MongoDB and MySQL,</span>  I enjoy 
-        building scalable and efficient systems. Mentoring others in Java MVC architecture 
-        and leading collaborative projects on GitHub have strengthened my ability to guide 
-        teams and manage development workflows effectively.
+        <span className="font-medium">A Software Engineering undergraduate at </span>
+        <span className="font-medium underline">
+          <Link href="https://www.sliit.lk/" target="_blank">
+            Sri Lanka Institute of Information Technology (SLIIT)
+          </Link>
+          ,
+        </span>{" "}
+        maintaining a 3.6/4 GPA and specializing in{" "}
+        <span className="font-medium">backend development</span> and innovative web solutions.
+        With <span className="font-medium">one year of industry experience</span> and strong
+        expertise in <span className="font-medium">Java, Spring Boot, MongoDB, and MySQL</span>,
+        I enjoy building scalable and efficient systems. Leading collaborative projects on GitHub
+        has strengthened my ability to manage development workflows and contribute effectively
+        within team-driven environments.
       </p>
 
       <p className="text-left">
-      <span className="italic">Beyond software development,</span> I have a deep interest in{" "}
-      <span className="font-medium">IoT and IIoT,</span> integrating{" "}
-      <span className="font-medium">NodeMCU and Arduino</span>{" "}
-      to create real-time sensor solutions. Always eager to tackle complex problems,{" "}
-      I continuously explore new technologies to refine my skills and contribute to{" "}
-      impactful projects. Let&apos;s connect and build something amazing!
+        <span className="italic">Beyond software development,</span> I have a strong interest in{" "}
+        <span className="font-medium">IoT and IIoT</span> and how they integrate with scalable
+        backend systems and cloud-native architectures. With hands-on{" "}
+        <span className="font-medium">experience in CI/CD pipelines</span>, I enjoy improving
+        development workflows through automation, reliable deployments, and continuous
+        improvement practices. Always eager to tackle complex problems, I continuously explore
+        new technologies to refine my skills and contribute to impactful, production-ready
+        solutions. Let&apos;s connect and build something amazing!
       </p>
+
     </motion.section>
   );
 }

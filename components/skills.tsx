@@ -15,8 +15,6 @@ export default function Skills() {
     "React",
     "Next.js",
     "React Native",
-    "HTML",
-    "CSS",
     "IOT",
     "Git",
     "GitHub",
