@@ -14,6 +14,7 @@ export default function Skills() {
     "TypeScript",
     "React",
     "Next.js",
+    "React Native",
     "HTML",
     "CSS",
     "IOT",
@@ -26,6 +27,10 @@ export default function Skills() {
     "Redis",
     "Postman",
     "Azure",
+    "AWS",
+    "Liquibase",
+    "CI/CD",
+    "Nginx"
   ];
 
   const fadeInAnimationVariants = {
