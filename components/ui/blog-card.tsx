@@ -1,35 +1,27 @@
-import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import Link from "next/link";
-import Markdown from "react-markdown";
-import { Icons } from "./icons";
-import {Post} from "@/types";
+import { Badge } from '@/components/ui/badge'
+import { Card, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { cn } from '@/lib/utils'
+import Image from 'next/image'
+import Link from 'next/link'
+import Markdown from 'react-markdown'
+import { Icons } from './icons'
+import { Post } from '@/types'
 
 interface Props {
-  post: Post;
-  className?: string;
+  post: Post
+  className?: string
 }
 
-export function BlogCard({
-  post,
-  className,
-}: Props) {
+export function BlogCard({ post, className }: Props) {
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden border dark:border-black hover:shadow-lg transition-all duration-300 ease-out h-full"
+        'flex h-full flex-col overflow-hidden border transition-all duration-300 ease-out hover:shadow-lg dark:border-black'
       }
     >
       <Link
-        href={post.link || "#"}
-        className={cn("block cursor-pointer", className)}
+        href={post.link || '#'}
+        className={cn('block cursor-pointer', className)}
       >
         {post.video && (
           <video
@@ -56,9 +48,12 @@ export function BlogCard({
           <CardTitle className="mt-1 text-base">{post.title}</CardTitle>
           <time className="font-sans text-xs">{post.pubDate}</time>
           <div className="hidden font-sans text-xs underline print:visible">
-            {post.link?.replace("https://", "").replace("www.", "").replace("/", "")}
+            {post.link
+              ?.replace('https://', '')
+              .replace('www.', '')
+              .replace('/', '')}
           </div>
-          <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
+          <Markdown className="prose text-muted-foreground dark:prose-invert max-w-full text-pretty font-sans text-xs">
             {post.description}
           </Markdown>
         </div>
@@ -66,15 +61,15 @@ export function BlogCard({
       <CardFooter className="px-2 pb-2">
         {post.link && post.link.length > 0 && (
           <div className="flex flex-row flex-wrap items-start gap-1">
-              <Link href={post.link} target="_blank" rel="noopener noreferrer">
-                <Badge className="flex gap-2 px-2 py-1 text-[10px]">
-                  {<Icons.globe className="size-3" />}
-                  {"Read More"}
-                </Badge>
-              </Link>
+            <Link href={post.link} target="_blank" rel="noopener noreferrer">
+              <Badge className="flex gap-2 px-2 py-1 text-[10px]">
+                {<Icons.globe className="size-3" />}
+                {'Read More'}
+              </Badge>
+            </Link>
           </div>
         )}
       </CardFooter>
     </Card>
-  );
+  )
 }

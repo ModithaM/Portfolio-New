@@ -1,18 +1,17 @@
-"use client";
+'use client'
 
-import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import myimg from "../public/me.jpeg";
-import { BsArrowRight } from "react-icons/bs";
+import Image from 'next/image'
+import React from 'react'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import myimg from '../public/me.jpeg'
+import { BsArrowRight } from 'react-icons/bs'
 
 export default function Home() {
-
   return (
     <section
       id="home"
-      className="max-w-[50rem] text-center sm:mb-0 pt-5 scroll-mt-[100rem]"
+      className="max-w-[50rem] scroll-mt-[100rem] pt-5 text-center sm:mb-0"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -20,7 +19,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "tween",
+              type: 'tween',
               duration: 0.2,
             }}
           >
@@ -31,7 +30,7 @@ export default function Home() {
               height="200"
               quality="95"
               priority={true}
-              className="h-28 w-28 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="shadow-xl h-28 w-28 rounded-full border-[0.35rem] border-white object-cover"
             />
           </motion.div>
 
@@ -40,7 +39,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "spring",
+              type: 'spring',
               stiffness: 125,
               delay: 0.1,
               duration: 0.7,
@@ -56,13 +55,13 @@ export default function Home() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hi, I&apos;m Moditha Marasingha.</span> I&apos;m a{" "}
-        <span className="font-bold">Full-Stack developer</span>{" "}who enjoys
-        building <span className="italic">things</span>.
+        <span className="font-bold">Hi, I&apos;m Moditha Marasingha.</span>{' '}
+        I&apos;m a <span className="font-bold">Full-Stack developer</span> who
+        enjoys building <span className="italic">things</span>.
       </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -71,15 +70,13 @@ export default function Home() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 transition"
-          onClick={() => {
-          }}
+          className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105 dark:bg-white dark:bg-opacity-10"
+          onClick={() => {}}
         >
-          Contact me {" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+          Contact me{' '}
+          <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
         </Link>
-
       </motion.div>
     </section>
-  );
+  )
 }

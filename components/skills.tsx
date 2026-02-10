@@ -1,35 +1,34 @@
-"use client";
+'use client'
 
-import React from "react";
-import SectionHeading from "./ui/sectionHeading";
-import { motion } from "framer-motion";
-import { Badge } from "./ui/badge";
+import React from 'react'
+import SectionHeading from './ui/sectionHeading'
+import { motion } from 'framer-motion'
+import { Badge } from './ui/badge'
 
 export default function Skills() {
-
   const skills = [
-    "Java",
-    "Spring Boot",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "React Native",
-    "IOT",
-    "Git",
-    "GitHub",
-    "Docker",
-    "MySQL",
-    "MongoDB",
-    "PostgreSQL",
-    "Redis",
-    "Postman",
-    "Azure",
-    "AWS",
-    "Liquibase",
-    "CI/CD",
-    "Nginx"
-  ];
+    'Java',
+    'Spring Boot',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Next.js',
+    'React Native',
+    'IOT',
+    'Git',
+    'GitHub',
+    'Docker',
+    'MySQL',
+    'MongoDB',
+    'PostgreSQL',
+    'Redis',
+    'Postman',
+    'Azure',
+    'AWS',
+    'Liquibase',
+    'CI/CD',
+    'Nginx',
+  ]
 
   const fadeInAnimationVariants = {
     initial: {
@@ -43,11 +42,11 @@ export default function Skills() {
         delay: 0.05 * index,
       },
     }),
-  };
+  }
 
   return (
     <section
-      className="max-w-[45rem] text-center sm:mb-2 scroll-mt-28 w-full"
+      className="w-full max-w-[45rem] scroll-mt-28 text-center sm:mb-2"
       id="skills"
     >
       <SectionHeading>Skills</SectionHeading>
@@ -71,5 +70,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  );
+  )
 }
