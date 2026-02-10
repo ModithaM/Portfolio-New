@@ -42,3 +42,6 @@ next-env.d.ts
 sitemap.js
 generate-sitemap.js
 beforepush.txt
+
+.idea
+.vscode

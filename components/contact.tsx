@@ -23,8 +23,7 @@ export default function Contact() {
         const result = await submitForm(name, email, message);
         if (result.success) {
             setSuccess(true);
-        }
-        if (result.error) {
+        } else {
             setError(true);
         }
       } catch (error) {

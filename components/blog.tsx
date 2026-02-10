@@ -3,17 +3,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { BlogCard } from "./ui/blog-card";
-import {getAllPosts} from "../services/blogposts"
+import {getAllPosts} from "@/services/blogposts"
+import {Post} from "@/types";
 
 export default function Blog() {
-    
-    interface Post {
-      title: string;
-      description: string;
-      pubDate: string;
-      image: string;
-      link: string;
-    }
 
     const [posts, setPosts] = useState<Post[]>([]);
 
@@ -63,11 +56,7 @@ export default function Blog() {
               <div key={id}>
                 <BlogCard
                   key={post.title}
-                  title={post.title}
-                  description={post.description}
-                  dates={post.pubDate}
-                  image={post.image}
-                  links={post.link}
+                  post={post}
                 />
               </div>
             ))}
