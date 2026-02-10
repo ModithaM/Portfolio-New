@@ -1,43 +1,42 @@
-"use client";
+'use client'
 
-import React from "react";
-import { useRef } from "react";
-import SectionHeading from "./ui/sectionHeading";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { EducationCard } from "./ui/education-card";
+import React from 'react'
+import { useRef } from 'react'
+import SectionHeading from './ui/sectionHeading'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { EducationCard } from './ui/education-card'
 
 export default function Education() {
-
   const education = [
     {
-      school: "SLIIT",
-      href: "https://www.sliit.lk/",
+      school: 'SLIIT',
+      href: 'https://www.sliit.lk/',
       degree: "Bachelor's Degree, Information Technology",
-      logoUrl: "/sliit.png",
-      start: "2023",
-      end: "Present",
+      logoUrl: '/sliit.png',
+      start: '2023',
+      end: 'Present',
     },
     {
-      school: "Kegalu Vidyalaya",
-      href: "https://kegaluvidyalaya.lk/",
-      degree: "GCE Advanced Level",
-      logoUrl: "/kv.jpeg",
-      start: "2009",
-      end: "2022",
+      school: 'Kegalu Vidyalaya',
+      href: 'https://kegaluvidyalaya.lk/',
+      degree: 'GCE Advanced Level',
+      logoUrl: '/kv.jpeg',
+      start: '2009',
+      end: '2022',
     },
-  ];
+  ]
 
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+    offset: ['0 1', '1.33 1'],
+  })
+  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1])
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1])
 
   return (
     <motion.section
-      className="max-w-[45rem] text-center sm:mb-2 scroll-mt-28 w-full"
+      className="w-full max-w-[45rem] scroll-mt-28 text-center sm:mb-2"
       id="education"
       ref={ref}
       style={{
@@ -47,7 +46,7 @@ export default function Education() {
     >
       <SectionHeading>Education</SectionHeading>
 
-      <div className="flex min-h-0 flex-col gap-y-3 ">
+      <div className="flex min-h-0 flex-col gap-y-3">
         {education.map((education) => (
           <EducationCard
             key={education.school}
@@ -60,7 +59,6 @@ export default function Education() {
           />
         ))}
       </div>
-
     </motion.section>
-  );
+  )
 }
