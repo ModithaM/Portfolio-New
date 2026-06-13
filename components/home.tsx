@@ -8,6 +8,14 @@ import myimg from '../public/me.jpeg'
 import { BsArrowRight } from 'react-icons/bs'
 
 export default function Home() {
+  const handleContactScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const contactElement = document.getElementById('contact')
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section
       id="home"
@@ -71,7 +79,7 @@ export default function Home() {
         <Link
           href="#contact"
           className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105 dark:bg-white dark:bg-opacity-10"
-          onClick={() => {}}
+          onClick={handleContactScroll}
         >
           Contact me{' '}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
