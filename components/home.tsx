@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import myimg from '../public/me.jpeg'
@@ -17,42 +17,45 @@ export default function Home() {
   }
 
   // BreadcrumbList schema for homepage
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://www.moditha.me',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'About',
-        item: 'https://www.moditha.me#about',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Experience',
-        item: 'https://www.moditha.me#experience',
-      },
-      {
-        '@type': 'ListItem',
-        position: 4,
-        name: 'Projects',
-        item: 'https://www.moditha.me#projects',
-      },
-      {
-        '@type': 'ListItem',
-        position: 5,
-        name: 'Contact',
-        item: 'https://www.moditha.me#contact',
-      },
-    ],
-  }
+
+  const breadcrumbSchema = useMemo(() => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://www.moditha.me',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'About',
+          item: 'https://www.moditha.me#about',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Experience',
+          item: 'https://www.moditha.me#experience',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'Projects',
+          item: 'https://www.moditha.me#projects',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'Contact',
+          item: 'https://www.moditha.me#contact',
+        },
+      ],
+    }
+  }, [])
 
   React.useEffect(() => {
     // Inject breadcrumb schema
@@ -60,7 +63,7 @@ export default function Home() {
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(breadcrumbSchema)
     document.head.appendChild(script)
-  }, [])
+  }, [breadcrumbSchema])
 
   return (
     <section

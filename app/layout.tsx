@@ -108,7 +108,7 @@ const websiteSchema: WithContext<WebSite> = {
     },
     'query-input': 'required name=search_term_string',
   },
-}
+} as never
 
 export default function RootLayout({
   children,
@@ -126,7 +126,9 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
         />
         <script
           type="application/ld+json"
