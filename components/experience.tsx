@@ -9,12 +9,20 @@ import { EducationCard } from './ui/education-card'
 export default function Experience() {
   const experience = [
     {
-      company: 'Intern Software Engineer',
-      href: 'https://revocaresolutions.com/',
-      position: 'Revocare Solutions',
-      logoUrl: '/revocare.jpeg',
-      start: '2025',
+      company: 'Pearson',
+      href: 'https://www.pearson.com/',
+      position: 'Associate Software Engineer Intern',
+      logoUrl: '/pearson.png',
+      start: 'Jun 2026',
       end: 'Present',
+    },
+    {
+      company: 'Revocare Solutions',
+      href: 'https://revocaresolutions.com/',
+      position: 'Intern Software Engineer',
+      logoUrl: '/revocare.jpeg',
+      start: 'Aug 2025',
+      end: 'Feb 2026',
     },
   ]
 
