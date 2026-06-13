@@ -45,11 +45,8 @@ export default function Contact() {
 
       <p className="mb-3 text-center font-medium">
         Feel free to reach out to me directly at{' '}
-        <a
-          className="italic underline"
-          href="mailto:marasinghamoditha51@gmail.com"
-        >
-          marasinghamoditha51@gmail.com
+        <a className="italic underline" href="mailto:contact@moditha.me">
+          contact@moditha.me
         </a>{' '}
         or through this form.
       </p>

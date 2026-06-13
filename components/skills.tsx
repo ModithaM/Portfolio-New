@@ -28,6 +28,8 @@ export default function Skills() {
     'Liquibase',
     'CI/CD',
     'Nginx',
+    'ELK',
+    'Micro frontend',
   ]
 
   const fadeInAnimationVariants = {

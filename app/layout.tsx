@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import ThemeContextProvider from '@/context/theme-context'
 import './globals.css'
 import { Dock } from '@/components/dock'
-import { Person, WithContext } from 'schema-dts'
+import { Person, WithContext, Organization, WebSite } from 'schema-dts'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd: WithContext<Person> = {
+// Person Schema - Main profile
+const personSchema: WithContext<Person> = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Moditha Marasingha',
@@ -56,12 +57,58 @@ const jsonLd: WithContext<Person> = {
     'Spring Boot',
     'React',
     'MongoDB',
+    'PostgreSQL',
+    'TypeScript',
+    'Next.js',
+    'Tailwind CSS',
   ],
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.moditha.me',
   },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+94',
+    contactType: 'Customer Service',
+    email: 'contact@moditha.me',
+  },
 }
+
+// Organization Schema
+const organizationSchema: WithContext<Organization> = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Moditha Marasingha',
+  url: 'https://www.moditha.me',
+  logo: 'https://www.moditha.me/me.jpeg',
+  sameAs: [
+    'https://www.linkedin.com/in/moditha-marasingha',
+    'https://github.com/ModithaM',
+    'https://medium.com/@moditham',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'Customer Service',
+    email: 'contact@moditha.me',
+  },
+}
+
+// Website Schema with search action
+const websiteSchema: WithContext<WebSite> = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  url: 'https://www.moditha.me',
+  name: 'Moditha Marasingha - Portfolio',
+  description: 'Full-stack developer portfolio showcasing projects and skills',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://www.moditha.me#search?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+} as never
 
 export default function RootLayout({
   children,
@@ -75,7 +122,17 @@ export default function RootLayout({
       >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <ThemeContextProvider>
           {children}

@@ -1,13 +1,70 @@
 'use client'
 
 import Image from 'next/image'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import myimg from '../public/me.jpeg'
 import { BsArrowRight } from 'react-icons/bs'
 
 export default function Home() {
+  const handleContactScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const contactElement = document.getElementById('contact')
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  // BreadcrumbList schema for homepage
+
+  const breadcrumbSchema = useMemo(() => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://www.moditha.me',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'About',
+          item: 'https://www.moditha.me#about',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Experience',
+          item: 'https://www.moditha.me#experience',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'Projects',
+          item: 'https://www.moditha.me#projects',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'Contact',
+          item: 'https://www.moditha.me#contact',
+        },
+      ],
+    }
+  }, [])
+
+  React.useEffect(() => {
+    // Inject breadcrumb schema
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(breadcrumbSchema)
+    document.head.appendChild(script)
+  }, [breadcrumbSchema])
+
   return (
     <section
       id="home"
@@ -71,7 +128,7 @@ export default function Home() {
         <Link
           href="#contact"
           className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105 dark:bg-white dark:bg-opacity-10"
-          onClick={() => {}}
+          onClick={handleContactScroll}
         >
           Contact me{' '}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
