@@ -113,4 +113,20 @@ npm run format:check  # Check formatting without changes
 
 ### Linking Between Sections
 1. Use Next.js `Link` with href pointing to section id: `href="#about"`
-2. Add `scroll-mt-[100rem]` to section for scroll padding offset
+2. Add smooth scroll handler with `scrollIntoView({ behavior: 'smooth' })`
+3. Add `scroll-mt-[100rem]` to section for scroll padding offset
+
+## SEO & Structured Data
+
+**Schema.org Integration:**
+- **Person Schema** — Main profile with job titles, skills, contact info, social profiles
+- **Organization Schema** — Portfolio entity with contact details and social links
+- **Website Schema** — Site-level metadata with search action capability
+- **BreadcrumbList Schema** — Navigation hierarchy for rich snippet display
+- **CreativeWork/Collection Schemas** — Individual projects with metadata (use `lib/schemas.ts` utilities)
+
+**Adding Project Schema:**
+Import `generateProjectSchema()` and `generateProjectCollectionSchema()` from `lib/schemas.ts` to generate CreativeWork schemas for projects. Inject via `<script type="application/ld+json">` tags.
+
+**Schema Testing:**
+Validate structured data at [Google Rich Results Test](https://search.google.com/test/rich-results)
