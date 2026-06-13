@@ -9,12 +9,20 @@ import { EducationCard } from './ui/education-card'
 export default function Volunteer() {
   const volunteer = [
     {
-      school: 'MS Club of SLIIT',
+      school: 'Head of Development',
       href: 'https://msclubsliit.org/',
-      degree: 'Volunteer Developer, Event Organizer',
+      degree: 'MS Club of SLIIT',
+      logoUrl: '/msclub.png',
+      start: 'Feb 2026',
+      end: 'Present',
+    },
+    {
+      school: 'Volunteer Developer, Event Organizer',
+      href: 'https://msclubsliit.org/',
+      degree: 'MS Club of SLIIT',
       logoUrl: '/msclub.png',
       start: '2025',
-      end: 'Present',
+      end: 'Feb 2026',
     },
   ]
 
